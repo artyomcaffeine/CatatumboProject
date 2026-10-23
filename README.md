@@ -10,7 +10,7 @@ Necesita Node 22.12 o más reciente.
 
 ```sh
 npm install
-npm run dev       # despliega en http://localhost:4321
+npm run dev       # despliega en modo desarrollo en http://localhost:4321
 npm run build     # sitio estático en dist/
 npm run preview   # previsualiza dist/ en local
 npm run check     # revisa los tipos
