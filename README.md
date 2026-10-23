@@ -10,10 +10,10 @@ Necesita Node 22.12 o más reciente.
 
 ```sh
 npm install
-npm run dev       # despliega en modo desarrollo en http://localhost:4321
-npm run build     # sitio estático en dist/
-npm run preview   # previsualiza dist/ en local
-npm run check     # revisa los tipos
+npm run dev       # Servidor de desarrollo en http://localhost:4321
+npm run build     # Construye la web terminada en dist/
+npm run preview   # Crea `dist/` para verla tal como quedará una vez publicada
+npm run check     # Busca errores de tipos
 ```
 
 ## Editar el contenido
