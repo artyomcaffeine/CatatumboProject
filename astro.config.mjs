@@ -1,4 +1,6 @@
 import { defineConfig } from 'astro/config';
+import { satteri } from '@astrojs/markdown-satteri';
+import { photoRows } from './src/lib/photo-rows.ts';
 
 /* PUBLIC_DEPLOY_TARGET=pages compila la vista previa de GitHub Pages, desplegada en
    https://<owner>.github.io/<repo>/. GitHub Actions define GITHUB_REPOSITORY ("owner/repo"),
@@ -14,9 +16,11 @@ export default defineConfig({
   site: pages ? `https://${owner.toLowerCase()}.github.io` : undefined,
   base: pages ? `/${repo}` : '/',
   trailingSlash: 'always',
+  /* Fotos de las páginas Markdown al lado del texto, alternando de lado (src/lib/photo-rows.ts). */
+  markdown: { processor: satteri({ hastPlugins: [photoRows] }) },
   i18n: {
     defaultLocale: 'es',
-    locales: ['es', 'en', 'de', 'fr'],
+    locales: ['es', 'en', 'de', 'fr', 'it'],
     routing: { prefixDefaultLocale: true },
   },
 });
